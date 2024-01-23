@@ -50,7 +50,8 @@ extension JTACMonthView: UICollectionViewDelegate, UICollectionViewDataSource {
         } else {
             cellState = cellStateFromIndexPath(indexPath)
         }
-        calendarDelegate!.calendar(self, willDisplay: cell as! JTACDayCell, forItemAt: cellState.date, cellState: cellState, indexPath: indexPath)
+        
+        calendarDelegate?.calendar(self, willDisplay: cell as! JTACDayCell, forItemAt: cellState.date, cellState: cellState, indexPath: indexPath)
     }
     
     /// Tells the delegate that the item at the specified index path was highlighted.
